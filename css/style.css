@@ -479,6 +479,11 @@ body.overflow.active {
   overflow: hidden;
 }
 
+h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 a {
   transition: 0.5s;
   outline: none;
@@ -615,13 +620,54 @@ height: auto;
 }
 
 .section-wrap {
-  padding: 5em 5em;
+  padding: 5rem 5rem;
+  clear: both;
+}
+
+.section-wrap-alt {
+  padding: 0;
+  clear: both;
+}
+
+.section-wrap-top {
+  padding: 5rem 5rem 0 5rem;
+  clear: both;
+}
+
+.section-wrap-bottom {
+  padding: 0 5rem 5rem 5rem;
   clear: both;
 }
 
 @media screen and (max-width: 768px) {
   .section-wrap {
-    padding: 3em 3em;
+    padding: 3rem 3rem;
+  }
+
+  .section-wrap-top {
+  padding: 3rem 3rem 0 3rem;
+  clear: both;
+  }
+
+.section-wrap-bottom {
+  padding: 0 3rem 3rem 3rem;
+  clear: both;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-wrap {
+    padding: 3rem 1rem;
+  }
+
+  .section-wrap-top {
+  padding: 3rem 1rem 0 1rem;
+  clear: both;
+  }
+
+  .section-wrap-bottom {
+  padding: 0 1rem 3rem 1rem;
+  clear: both;
   }
 }
 
@@ -647,7 +693,7 @@ height: auto;
   color: var(--slate-grey);
 }
 
-.heading span {
+.subheading {
   display: block;
   margin-bottom: 0.6rem;
   text-transform: uppercase;
@@ -667,7 +713,8 @@ height: auto;
   font-size: 1.15rem;
   margin-bottom: 5px;
   line-height: auto;
-  color: var(--slate-grey);
+  color: var(--slate-grey) !important;
+  cursor: pointer;
 }
 
 .profile > h5 {
@@ -710,6 +757,10 @@ height: auto;
   margin-bottom: 5px;
 }
 
+.text-body-secondary {
+  font-size: 0.8rem;
+}
+
 .modal-body h5 {
   font-size: 1.4rem;
   font-weight: 300;
@@ -745,6 +796,18 @@ height: auto;
   #infographic-narrow {
 	  display: none;
   }
+}
+
+.fill-photo-width {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.fill-photo-height {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .services {
@@ -795,7 +858,7 @@ ul.bulletpoint {
 }
 
 ul.bulletpoint li {
-	margin: 0 0 0.75rem 0;
+	margin: 0 0 0.25rem 0;
   padding: 0 0 0 2rem;
   position: relative;
 }
@@ -893,6 +956,54 @@ ul.bulletpoint li:last-child {
 
 .scroll-to-top a:hover {
   color: rgba(0, 0, 0, 0.7);
+}
+
+.info-box {
+  padding: 4rem;
+}
+
+.pink {
+  background-color: var(--aulakh-pink-light);
+}
+
+.blue {
+  background-color: var(--aulakh-blue-light);
+}
+
+.green {
+  background-color: var(--aulakh-green-light);
+}
+
+@media screen and (max-width: 1400px) {
+  .info-box {
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .info-box {
+    padding: 2.75rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .info-box {
+    padding: 1.2rem;
+  }
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--slate-grey) !important;
+  color: #fff !important;
+}
+
+.accordion-button:not(.collapsed):after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, .125);
 }
 
 /* NAV MENU */
