@@ -21,6 +21,7 @@
   --aulakh-pink-extralight: rgba(231, 221, 220, 0.5);
   --slate-grey: #374151;
   --slate-grey-light: #596383;
+  --info-box-grey: rgba(0, 0, 0, 0.1);
 }
 
 /* 'POPPINS' FONT DECLARATIONS */
@@ -655,9 +656,15 @@ height: auto;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .section-wrap {
-    padding: 3rem 1rem;
+    padding: 5rem 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-wrap {
+    padding: 3rem 0rem;
   }
 
   .section-wrap-top {
@@ -806,7 +813,7 @@ height: auto;
 
 .fill-photo-height {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -959,7 +966,21 @@ ul.bulletpoint li:last-child {
 }
 
 .info-box {
+  padding: 6rem;
+}
+
+.info-box-less-padding {
   padding: 4rem;
+}
+
+.info-nobox {
+  padding: 0rem;
+}
+
+@media screen and (max-width: 576px) {
+  .info-nobox {
+    padding: 1rem;
+  }
 }
 
 .pink {
@@ -974,6 +995,10 @@ ul.bulletpoint li:last-child {
   background-color: var(--aulakh-green-light);
 }
 
+.grey {
+  background-color: var(--info-box-grey);
+}
+
 @media screen and (max-width: 1400px) {
   .info-box {
     padding: 4rem;
@@ -981,14 +1006,14 @@ ul.bulletpoint li:last-child {
 }
 
 @media screen and (max-width: 1200px) {
-  .info-box {
+  .info-box, .info-box-less-padding {
     padding: 2.75rem;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .info-box {
-    padding: 1.2rem;
+  .info-box, .info-box-less-padding {
+    padding: 1.7rem;
   }
 }
 
